@@ -1,0 +1,88 @@
+# Optimized SDN Attack Detection Dataset (InSDN2020)
+
+## Overview
+
+The **InSDN2020** dataset is a carefully curated collection of labeled network traffic data for **Software-Defined Networking (SDN)** environments, aimed at facilitating research in intrusion detection and network security using machine learning techniques.
+
+This dataset focuses on **multiclass classification** of network traffic into normal and various attack categories. It features optimized subsets of attributes selected through a hybrid evolutionary feature selection approach to improve model efficiency and performance.
+
+---
+
+## Dataset Contents
+
+The dataset consists of **three CSV files**:
+
+- **`metasploitable.csv`**: Traffic data generated from SDN environments using Metasploitable vulnerable systems, including both attack and normal traffic instances.  
+- **`ovs.csv`**: Traffic captured from SDN setups utilizing Open vSwitch (OVS), containing normal and attack traffic flows.  
+- **`normal.csv`**: Baseline dataset consisting solely of normal SDN traffic for comparison and binary classification experiments.
+
+Each file contains rows representing individual network traffic flows and columns representing selected features plus a class label.
+
+---
+
+## Feature Selection Methodology
+
+To enhance classification accuracy and reduce model complexity, a two-step evolutionary feature selection process was applied:
+
+1. **Modified BAT Algorithm:**  
+   - An optimization technique inspired by the echolocation behavior of bats.  
+   - This version incorporates a **weighted fitness function based on Mutual Information** to select the most relevant features that provide high information gain with respect to the target class.
+
+2. **Genetic Algorithm (GA) Refinement:**  
+   - The feature subset obtained from the BAT algorithm is further refined using a Genetic Algorithm to eliminate redundancy and improve overall feature quality.
+
+This hybrid approach ensures the selection of an optimal and compact feature set that maximizes classifier performance.
+
+---
+
+## Machine Learning Models Evaluated
+
+The optimized feature sets were used to train and test multiple single classifiers, including:
+
+- Random Forest  
+- Extra Trees  
+- Prep Tree  
+- XGBoost  
+- LightGBM  
+- AdaBoost  
+
+---
+
+## Performance Metrics
+
+Evaluation of the classifiers employed a comprehensive set of performance metrics:
+
+- Accuracy  
+- Detection Rate  
+- Precision  
+- Recall  
+- False Alarm Rate  
+- AUC-ROC  
+- Execution Time (for model training and testing)
+
+---
+
+## Usage Recommendations
+
+This dataset is suitable for:
+
+- Developing and benchmarking **intrusion detection systems** in SDN networks  
+- Comparing performance of different **machine learning classifiers** on feature-optimized data  
+- Experimenting with **feature selection** techniques in network security contexts  
+- Conducting research on **multiclass classification** problems involving network traffic data
+
+---
+
+## Source and Citation
+
+This dataset is derived from research datasets provided by University College Dublin’s [ASEADOS Project](https://www.kaggle.com/datasets/atifkhan89/optimized-sdn-attack-detection-dataset/). Users are encouraged to cite the original source in any academic or research work utilizing this data.
+
+---
+
+## Contact
+
+For any questions or contributions, please contact [Your Name or Contact Info].
+
+---
+
+*This README was generated to provide comprehensive insight into the dataset, feature engineering techniques, and potential applications in the field of SDN security.*
