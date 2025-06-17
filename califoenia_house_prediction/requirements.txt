@@ -1,0 +1,14 @@
+# Core libraries
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+
+# Modeling
+scikit-learn
+
+# Jupyter Notebook (optional)
+jupyter
+# Add your dependencies here

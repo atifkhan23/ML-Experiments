@@ -1,0 +1,13 @@
+# Add your dependencies here
+# Core Libraries
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+# ML Models
+lightgbm
+
+# For Notebook
+jupyter
